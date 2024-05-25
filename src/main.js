@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import CustomForm from "./components/CustomForm.vue"
+
+const app = createApp(App);
+app.component("customForm", CustomForm);
+
+app.mount("#app");
