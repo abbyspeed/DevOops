@@ -80,7 +80,7 @@ export default{
     flex: 1;
     background-color: #FF9B3F;
     border-radius: 25px;
-    padding: 55px 0;
+    padding: 170px 0;
 }
 
 .logo{
