@@ -6,24 +6,47 @@
         </div>
         <div class="loginForm">
             <h3>Log into LingoNow</h3>
-            <customForm></customForm>
+            <form>
+                <customForm v-for="form in form" 
+                    :title="form.title" 
+                    :placeholderText="form.placeholderText" 
+                    :isPassword="form.isPassword"
+                    :key="form.id"></customForm>
+            </form>
             <button class="mainBtn">Login</button>
-            <a href="#">
+            <router-link :to="{ name: 'Signup' }">
                 <center>Don't have an account? Sign up now!</center>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>
 
 <script>
-
+export default{
+    data(){
+        return{
+            form: [
+                {
+                    title: "Username",
+                    placeholderText: "e.g Qistina Ridhwan",
+                    isPassword: false
+                },
+                {
+                    title: "Password",
+                    placeholderText: "e.g *********",
+                    isPassword: true
+                }
+            ]
+        }
+    }
+}
 </script>
 
 <style scoped>
 .container{
     display: flex;
     width: 50%;
-    height: 400px;
+    height: 100%;
     justify-content: center;
     background-color: white;
     border-radius: 25px;
@@ -52,7 +75,7 @@
 
 h3{
     text-align: center;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 
 a{

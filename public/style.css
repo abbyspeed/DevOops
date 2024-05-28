@@ -36,4 +36,5 @@ a{
 .mainBtn:hover{
     background-color: white;
     border: 1px solid #FF9B3F;
+    color: #FF9B3F;
 }
