@@ -1,30 +1,30 @@
 <template>
     <div class="container">
         <div class="logoSection">
-            <img :src="require('/src/assets/logo.png')" alt="LingoNow" class="logo"/>
+            <img :src="require('/src/assets/logo.png')" alt="LingoNow" class="logo" />
             <h2>LingoNow</h2>
         </div>
         <div class="loginForm">
             <h3>Log into LingoNow</h3>
             <form>
-                <customForm v-for="form in form" 
-                    :title="form.title" 
-                    :placeholderText="form.placeholderText" 
-                    :isPassword="form.isPassword"
-                    :key="form.id"></customForm>
+                <customForm v-for="form in form" :title="form.title" :placeholderText="form.placeholderText"
+                    :isPassword="form.isPassword" :key="form.id"></customForm>
             </form>
             <button class="mainBtn">Login</button>
             <router-link :to="{ name: 'Signup' }">
                 <center>Don't have an account? Sign up now!</center>
             </router-link>
+            <router-link :to="{ name: 'Search' }">View "Search" page here</router-link> <!--for view only-->
+            <br>
+            <router-link :to="{ name: 'Manage' }">View "Manage" page here</router-link> <!--for view only-->
         </div>
     </div>
 </template>
 
 <script>
-export default{
-    data(){
-        return{
+export default {
+    data() {
+        return {
             form: [
                 {
                     title: "Username",
@@ -43,7 +43,7 @@ export default{
 </script>
 
 <style scoped>
-.container{
+.container {
     display: flex;
     width: 50%;
     height: 100%;
@@ -54,31 +54,31 @@ export default{
     transform: translate(50%, 35%);
 }
 
-.logoSection{
+.logoSection {
     flex: 1;
     background-color: #FF9B3F;
     border-radius: 25px;
     padding: 55px 0;
 }
 
-.logo{
+.logo {
     width: 200px;
     height: 200px;
 }
 
-.loginForm{
+.loginForm {
     flex: 1;
     height: 100%;
     text-align: left;
     padding: 10px 20px;
 }
 
-h3{
+h3 {
     text-align: center;
     margin: 30px 0;
 }
 
-a{
+a {
     color: black;
     font-size: 12px;
     text-align: center;
