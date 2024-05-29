@@ -2,29 +2,28 @@
     <div class="team">
       <h3>Developer Team</h3>
       <div class="developers">
-        <Developer name="Hana Humaira" />
-        <Developer name="Haneen Mo'men" />
-        <Developer name="Wan Nurnabihah" />
-        <Developer name="Norliyana Aisyah" />
-        <Developer name="Sakif Hossain" />
+        <OurDeveloper name="Hana Humaira" />
+        <OurDeveloper name="Haneen Mo'men" />
+        <OurDeveloper name="Wan Nurnabihah" />
+        <OurDeveloper name="Norliyana Aisyah" />
+        <OurDeveloper name="Sakif Hossain" />
       </div>
     </div>
   </template>
   
   <script>
-  import Developer from './Developer.vue';
-  
-  export default {
-    name: 'Team',
-    components: {
-      Developer
-    }
-  };
+    import OurDeveloper from './OurDeveloper.vue';
+
+    export default {
+      components: {
+        OurDeveloper
+      }
+    };
   </script>
   
   <style scoped>
   .team {
-    background-color: orange;
+    background-color: #FF9B3F;
     padding: 50px 100px;
     color: black;
   }

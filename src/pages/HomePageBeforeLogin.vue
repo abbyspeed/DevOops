@@ -5,7 +5,7 @@
         <h1 class="logo">Logo</h1>
         <div class="menu">
           <a href="#" class="menu-item">Home</a>
-          <a href="#" class="menu-item">About Us</a>
+          <router-link to="/About" class="menu-item">About Us</router-link>
           <a href="#" class="menu-item">Categories</a>
           <a href="#" class="menu-item">Manage</a>
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b366fb62b1a37ddf4c7ba876eec7a8aec9e26cfc28009f9b1065ab2a52a3b6fa?apiKey=d314e47cd2b145d4ba1bdf6144e8401a" alt="Menu Icon" class="menu-icon" />

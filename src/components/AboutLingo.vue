@@ -10,20 +10,20 @@
         </p>
       </div>
       <div class="penguin">
-        <img src="@/assets/penguin.png" alt="Penguin Flat Image" height="300px" width="300px" />
+        <img src="@/assets/logo.png" alt="Penguin Flat Image" height="300px" width="300px" />
       </div>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'About'
+    name: 'AboutLingo'
   };
   </script>
   
   <style scoped>
   .about {
-    background-color: orange;
+    background-color: #FF9B3F;
     padding: 50px 100px;
     display: flex;
     justify-content: space-between;

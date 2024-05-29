@@ -1,13 +1,13 @@
 <template>
     <div class="developer">
-      <img src="@/assets/account-icon.png" :alt="name" />
+      <img src="@/assets/user.png" :alt="name" />
       <p>{{ name }}</p>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'Developer',
+    name: 'OurDeveloper',
     props: {
       name: {
         type: String,
@@ -26,7 +26,7 @@
   .developer img {
     width: 100px;
     height: 100px;
-    background-color: #ff9800;
+    background-color: #FF9B3F;
     border-radius: 50%;
     margin-bottom: 0.5rem;
   }

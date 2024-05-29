@@ -1,21 +1,14 @@
 <template>
   <navBar></navBar>
       <div class="background">
-        <about></about>
+        <aboutLingo></aboutLingo>
         <visionMission></visionMission>
-        <team></team>
+        <ourTeam></ourTeam>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'AboutUs',
-    components: {
-      NavBar,
-      About,
-      VisionMission,
-      Team
-    }
   };
   </script>
   
@@ -36,7 +29,7 @@
   
   .background {
     width: 100%;
-    background-color: orange;
+    background-color: FF9B3F;
     background-size: cover;
   }
   </style>

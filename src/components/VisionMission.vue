@@ -38,7 +38,7 @@
   
   .vision h3, .mission h3 {
     margin-bottom: 1rem;
-    color: orange;
+    color: #FF9B3F;
   }
   </style>
   

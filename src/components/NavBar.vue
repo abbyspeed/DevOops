@@ -8,9 +8,9 @@
     <div class="menu">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><router-link to="/About">About Us</router-link></li>
         <li><a href="#">Categories</a></li>
-        <li><a href="#">Manage</a></li>
+        <li><router-link to="/Manage">Manage</router-link></li>
       </ul>
     </div>
     <div class="userProfile">
@@ -90,6 +90,7 @@
   font-weight: bold;
   transition: 0.4s ease-in-out;
   padding: 10px 30px;
+  font-size: 16px;
 }
 
 .menu ul li a:hover {
