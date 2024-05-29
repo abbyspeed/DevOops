@@ -15,7 +15,7 @@
     </div>
     <div class="userProfile">
       <img :src="require('/src/assets/user.png')" alt="user" class="user" />
-        <p>User</p>
+      <p>User</p>
     </div>
   </div>
 </template>
@@ -32,28 +32,37 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  box-sizing: border-box;
+  /* Ensure padding is included in the width */
   color: white;
-  background-color: #FF9B3F; /* Optional: Add background color for better visibility */
-    font-family: 'Inter', sans-serif; /* Apply Inter font */
+  background-color: #FF9B3F;
+  /* Optional: Add background color for better visibility */
+  font-family: 'Inter', sans-serif;
+  /* Apply Inter font */
 }
 
 .logoSection {
   display: flex;
   align-items: center;
   flex: 1;
-  min-width: 200px; /* Ensure minimum width for the logo section */
+  min-width: 200px;
+  padding: 0px;
+  /* Ensure minimum width for the logo section */
 }
 
 .logoSection h2 {
   margin: 0;
-  font-size: 18px; /* Adjust font size */
+  font-size: 18px;
+  /* Adjust font size */
 }
 
 .logo {
-  width: 40px; /* Adjust the width to make the logo smaller */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 10px; /* Space between logo and text */
+  width: 40px;
+  /* Adjust the width to make the logo smaller */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 10px;
+  /* Space between logo and text */
 }
 
 .menu {
@@ -80,7 +89,7 @@
   font-family: Arial;
   font-weight: bold;
   transition: 0.4s ease-in-out;
-  padding: 10px 30px; 
+  padding: 10px 30px;
 }
 
 .menu ul li a:hover {
@@ -92,18 +101,24 @@
   align-items: center;
   flex: 1;
   justify-content: flex-end;
-  min-width: 100px; /* Ensure minimum width for the user profile section */
+  min-width: 100px;
+  /* Ensure minimum width for the user profile section */
 }
 
 .user {
-  width: 40px; /* Adjust the width to make the user image smaller */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Make the image circular */
-  margin-left: 10px; /* Space between user image and text */
+  width: 40px;
+  /* Adjust the width to make the user image smaller */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 50%;
+  /* Make the image circular */
+  margin-left: 10px;
+  /* Space between user image and text */
 }
 
 .userProfile p {
-  margin-left: 10px; /* Space between user image and text */
+  margin-left: 10px;
+  /* Space between user image and text */
 }
 
 
@@ -115,7 +130,7 @@
   }
 
   .menu ul li {
-   padding: 10px 20px;
+    padding: 10px 20px;
   }
 }
 </style>
