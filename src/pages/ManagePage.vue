@@ -1,32 +1,8 @@
 <template>
     <navBar></navBar>
-    <div class="test">
-        <h2>Manage Slangs</h2>
-    </div>
-    <button class="newSlang">Create a new slang</button>
+    <h2>Manage Slangs</h2>
     <slangTable></slangTable>
-    <!--<slangTable v-if="showForm"></slangTable>-->
 </template>
-
-<!--<script>
-import SlangTable from './components/SlangTable.vue'; // Adjust this path based on your project structure
-
-export default {
-    components: {
-        SlangTable
-    },
-    data() {
-        return {
-            showForm: false
-        };
-    },
-    methods: {
-        toggleForm() {
-            this.showForm = !this.showForm;
-        }
-    }
-};
-</script>-->
 
 <style scoped>
 .newSlang {

@@ -13,6 +13,7 @@ import SearchPage from "./pages/SearchPage.vue"
 import HomePageBeforeLogin from './pages/HomePageBeforeLogin.vue';
 import ManagePage from './pages/ManagePage.vue'
 import AboutUsPage from './pages/AboutUsPage.vue';
+import CreatePage from './pages/CreatePage.vue';
 
 const app = createApp(App);
 app.component("customForm", CustomForm);
@@ -25,7 +26,8 @@ app.component("searchPage", SearchPage);
 app.component("HomePageBeforeLogin",HomePageBeforeLogin);
 app.component("managePage", ManagePage);
 app.component("slangTable", SlangTable);
-app.component("aboutUs", AboutUsPage)
+app.component("aboutUs", AboutUsPage);
+app.component("createPage", CreatePage);
 
 app.use(router);
 app.mount("#app");

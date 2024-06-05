@@ -1,10 +1,8 @@
 <template>
     <div class="table-container">
-        <!--<form @submit.prevent="addNewEntry">
-            <input v-model="newSlang.Slang" placeholder="Enter slang" required />
-            <input v-model="newSlang.Date" placeholder="Enter date" required />
-            <button type="submit">Add</button>
-        </form>-->
+        <button class="newSlang">
+            <router-link to="/Create">Create a new slang</router-link>
+        </button>
 
         <table>
             <thead>
@@ -13,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(row, rowIndex) in rows" :key="rowIndex">
+                <tr v-for="(row, rowIndex) in slangs" :key="rowIndex">
                     <td v-for="(column, colIndex) in columns" :key="colIndex">{{ row[column] }}</td>
                 </tr>
             </tbody>
@@ -22,62 +20,43 @@
 </template>
 
 <script>
+import { computed } from 'vue';
+import state from '../state.js';
+
 export default {
-    //name: 'SlangTable',
-    data() {
+    setup() {
+        const slangs = computed(() => {
+            console.log('Recomputed slangs:', state.slangs);
+            return state.slangs;
+        });
+
         return {
-            columns: ['Slang', 'Date', 'Manage'],
-            rows: [
-                { Slang: 'Delulu', Date: '22/5/2024', Manage: '-' },
-                { Slang: 'IYKYK', Date: '3/5/2024', Manage: '-' },
-                { Slang: 'Rizz', Date: '1/2/2024', Manage: '-' }
-            ],
-            newSlang: {
-                Slang: '',
-                Date: ''
-            }
+            slangs,
+            columns: ['Slang', 'Date', 'Manage']
         };
-    },
-    /*methods: {
-        addNewEntry() {
-            this.rows.push({
-                ...this.newSlang,
-                Manage: '-'
-            });
-            this.newSlang.Slang = '';
-            this.newSlang.Date = '';
-        }
-    }*/
+    }
 };
 </script>
 
 <style scoped>
+.newSlang {
+    background-color: #ff9b3f;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 30px;
+    padding: 10px;
+    cursor: pointer;
+    color: #2C3E50;
+    position: absolute;
+    bottom: 0;
+}
+
 .table-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
-
-/*form {
-    margin-bottom: 20px;
-}
-
-input {
-    margin-right: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: 8px 16px;
-    background-color: #FF9B3F;
-    color: #2C3E50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}*/
 
 table {
     border-collapse: separate;
@@ -103,7 +82,6 @@ thead th {
 
 tbody tr:nth-child(odd) {
     background-color: #fde4cb;
-    /* Optional: Alternating row colors for better readability */
 }
 
 tbody tr:nth-child(even) {
