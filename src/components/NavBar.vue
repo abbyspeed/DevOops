@@ -7,7 +7,7 @@
     </div>
     <div class="menu">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/About">About Us</router-link></li>
         <li><a href="#">Categories</a></li>
         <li><router-link to="/Manage">Manage</router-link></li>

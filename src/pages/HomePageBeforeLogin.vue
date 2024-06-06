@@ -1,16 +1,23 @@
 <template>
   <div class="cont">
     <header class="header">
-      <div class="nav">
-        <h1 class="logo">Logo</h1>
-        <div class="menu">
-          <a href="#" class="menu-item">Home</a>
-          <router-link to="/About" class="menu-item">About Us</router-link>
-          <a href="#" class="menu-item">Categories</a>
-          <a href="#" class="menu-item">Manage</a>
+      <div class="navbar">
+        <div class="logoSection">
+          <img :src="require('/src/assets/logo.png')" alt="LingoNow" class="logo" />
+          <h2>LingoNow</h2>
+          </div>
+
+          <div class="menu">
+            <ul>
+              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/About">About Us</router-link></li>
+              <li><a href="#">Categories</a></li>
+              <li><router-link to="/Manage">Manage</router-link></li>
+            </ul>
+          </div>
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b366fb62b1a37ddf4c7ba876eec7a8aec9e26cfc28009f9b1065ab2a52a3b6fa?apiKey=d314e47cd2b145d4ba1bdf6144e8401a" alt="Menu Icon" class="menu-icon" />
           <router-link :to="{ name: 'Login' }" class="menu-item">Login</router-link>
-        </div>
+        
       </div>
       <div class="search-section">
         <h2 class="search-title">Search the SLANG</h2>
@@ -96,11 +103,20 @@ body {
   position: relative;
 }
 
-.nav {
-  display: flex;
+.navbar {
   width: 100%;
-  align-items: flex-start;
-  padding-top: 10px; 
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  /* Ensure padding is included in the width */
+  color: white;
+  background-color: #FF9B3F;
+  /* Optional: Add background color for better visibility */
+  font-family: 'Inter', sans-serif;
+  /* Apply Inter font */
 }
 
 .logo {
@@ -115,16 +131,35 @@ body {
 
 .menu {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  border-left: 100px;
 }
 
-.menu-item {
-  padding-left: 20px;
-  font-size: 32px;
-  display: inline-block;
-  font-family: Inter;
-  color: #000;
-  text-align: center;
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin-left: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #ff7200;
 }
 
 .login-item {
@@ -229,7 +264,7 @@ body {
   flex-direction: column; 
   width: 35%; 
   margin-left: 1500px;
-  margin-top:-140px;
+  margin-top:30px;
 }
 
 
@@ -349,5 +384,28 @@ font-size: inherit;
 padding-left: 32px;
 text-align: left !important;
   }
+}
+.logoSection {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 0px;
+  /* Ensure minimum width for the logo section */
+}
+
+.logoSection h2 {
+  margin: 0;
+  font-size: 18px;
+  /* Adjust font size */
+}
+
+.logo {
+  width: 40px;
+  /* Adjust the width to make the logo smaller */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-right: 10px;
+  /* Space between logo and text */
 }
 </style>
