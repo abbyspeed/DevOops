@@ -7,8 +7,12 @@
         <div class="loginForm">
             <h3>Log into LingoNow</h3>
             <form @submit.prevent="validateUser()">
-                <customForm v-for="form in form" :title="form.title" :placeholderText="form.placeholderText"
-                    :isPassword="form.isPassword" :key="form.id"></customForm>
+                <customForm v-for="form in form" 
+                    :title="form.title" 
+                    :placeholderText="form.placeholderText"
+                    :isPassword="form.isPassword" 
+                    :key="form.id"
+                    v-model="form.inputData"></customForm>
             
                 <button type="submit" class="mainBtn">Login</button>
             </form>
@@ -27,19 +31,27 @@ export default {
                 {
                     title: "Username",
                     placeholderText: "e.g Qistina Ridhwan",
-                    isPassword: false
+                    isPassword: false,
+                    inputData: ""
                 },
                 {
                     title: "Password",
                     placeholderText: "e.g *********",
-                    isPassword: true
+                    isPassword: true,
+                    inputData: ""
                 }
             ]
         }
     },
     methods: {
         validateUser(){
-            this.$router.push('/Create');
+            const userData = [];
+
+            for(let i=0; i<this.form.length; i++){
+                userData.push(this.form[i].inputData);
+            }
+
+            // this.$router.push('/Create');
         }
     }
 }

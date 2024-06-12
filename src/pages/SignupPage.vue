@@ -7,7 +7,8 @@
                     :title="form.title" 
                     :placeholderText="form.placeholderText" 
                     :isPassword="form.isPassword"
-                    :key="form.id + 1"></customForm>
+                    :key="form.id + 1"
+                    v-model="form.inputData"></customForm>
             
                 <button type="submit" class="mainBtn">Sign Up</button>
             </form>
@@ -33,37 +34,48 @@ export default{
                     id: id,
                     title: "Full name",
                     placeholderText: "e.g Qistina Ridhwan",
-                    isPassword: false
+                    isPassword: false,
+                    inputData: ""
                 },
                 {
                     id: id,
                     title: "Email address",
                     placeholderText: "e.g qistina@gmail.com",
-                    isPassword: false
+                    isPassword: false,
+                    inputData: ""
                 },
                 {
                     id: id,
                     title: "Username",
                     placeholderText: "e.g Qistina901",
-                    isPassword: false
+                    isPassword: false,
+                    inputData: ""
                 },
                 {
                     id: id,
                     title: "Password",
                     placeholderText: "e.g *********",
-                    isPassword: true
+                    isPassword: true,
+                    inputData: ""
                 },
                 {
                     id: id,
                     title: "Confirm password",
                     placeholderText: "e.g *********",
-                    isPassword: true
+                    isPassword: true,
+                    inputData: ""
                 }
             ]
         }
     },
     methods: {
         createUser(){
+            const newUserData = [];
+
+            for(let i=0; i<this.form.length; i++){
+                newUserData.push(this.form[i].inputData);
+            }
+
             this.$router.push('/Login');
         }
     }

@@ -1,16 +1,23 @@
 <template>
     <p>{{ title }}</p>
-    <input v-if="isPassword === false" type="text" :placeholder="placeholderText" required>
-    <input v-else type="password" :placeholder="placeholderText" required>
+    <input v-if="isPassword === false" type="text" :placeholder="placeholderText" 
+        :value="modelValue" 
+        @input="$emit('update:modelValue', $event.target.value)" 
+        required>
+    <input v-else type="password" :placeholder="placeholderText" 
+        :value="modelValue" 
+        @input="$emit('update:modelValue', $event.target.value)" 
+        required>
 </template>
 
 <script>
 export default{
-    props: [
-        "title",
-        "placeholderText",
-        "isPassword"
-    ]
+    props: {
+        title: { type: String },
+        placeholderText: { type: String },
+        isPassword: { type: Boolean },
+        modelValue: { type: String }
+    }
 }
 </script>
 
