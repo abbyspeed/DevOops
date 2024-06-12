@@ -2,14 +2,15 @@
     <div class="container">
         <div class="signupForm">
             <h3>Sign up an Account</h3>
-            <form>
+            <form @submit.prevent="createUser()">
                 <customForm v-for="form in form" 
                     :title="form.title" 
                     :placeholderText="form.placeholderText" 
                     :isPassword="form.isPassword"
                     :key="form.id + 1"></customForm>
+            
+                <button type="submit" class="mainBtn">Sign Up</button>
             </form>
-            <button class="mainBtn">Sign Up</button>
             <router-link :to="{ name: 'Login' }">
                 <center>Have an account? Log in now!</center>
             </router-link>
@@ -59,6 +60,11 @@ export default{
                     isPassword: true
                 }
             ]
+        }
+    },
+    methods: {
+        createUser(){
+            this.$router.push('/Login');
         }
     }
 }
