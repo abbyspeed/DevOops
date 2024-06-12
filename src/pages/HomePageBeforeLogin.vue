@@ -86,8 +86,8 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: 100%;
-  height: max-content;
+  height: 1040px;
+  height: max-content; /* Use 'height: max-content' instead of 1040px if dynamic height is desired */
 }
 
 .header {
@@ -98,7 +98,7 @@
 }
 
 .navbar {
-  width: 100%;
+  width: 1850px;
   height: 75px;
   display: flex;
   justify-content: space-between;
@@ -198,7 +198,6 @@
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   margin-top: 0px;
- 
   font-size: 32px;
   color: #6e6e6e;
   font-weight: 400;
@@ -253,19 +252,19 @@
   object-position: center;
   width: 36px;
 }
+
 .image-column { 
   display: flex; 
   flex-direction: column; 
-  width: 35%; 
+  width: 100px; 
   margin-left: 1500px;
-  margin-top:30px;
+  margin-top: 30px;
 }
-
-
 
 .decorative-image { 
-  width: 55%; 
+  width: 350.5px; 
 }
+
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -278,7 +277,7 @@
 }
 
 .rectangle-div {
-  width: calc(33.33% - 20px); 
+  width: 400px; /* Assuming the container's width for these elements is around 1850px */
   margin-right: 100px; 
   position: relative;
   border-radius: 25px;
@@ -288,26 +287,25 @@
   height: 387px;
 }
 
-
-
-
 .recently-added,
 .todays-slang {
   width: 100%;
   max-width: 600px;
 }
+
 .top-used-slang {
   text-align: left;
   margin-left: 75px;
 }
+
 .section-title {
   width: 249px;
-position: relative;
-font-size: 32px;
-display: inline-block;
-font-family: Inter;
-color: #000;
-text-align: center;
+  position: relative;
+  font-size: 32px;
+  display: inline-block;
+  font-family: Inter;
+  color: #000;
+  text-align: center;
 }
 
 .slang-list {
@@ -340,17 +338,17 @@ text-align: center;
   padding: 19px 60px;
   cursor: pointer;
   border: none;
-  width: 40%;
+  width: 160px; /* Assuming 40% of a container width of 1850px */
   margin-left: 50px;
   font-size: 24px;
-  
 }
 
 .slang-description {
   font-size: 17px;
-font-family: Inter;
-color: #000;
+  font-family: Inter;
+  color: #000;
 }
+
 .item-button {
   font-family: JetBrains Mono, sans-serif;
   border-radius: 20px;
@@ -361,24 +359,25 @@ color: #000;
   padding: 19px 60px;
   cursor: pointer;
   border: none;
-  width: 40%;
+  width: 160px; /* Assuming 40% of a container width of 1850px */
   margin-left: 50px;
   font-size: 24px;
-  
 }
+
 @media (max-width: 991px) {
   .item-button {
     white-space: initial;
     padding: 0 20px;
   }
-  .list{
+  .list {
     margin: 0;
-font-family: inherit;
-font-size: inherit;
-padding-left: 32px;
-text-align: left !important;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 32px;
+    text-align: left !important;
   }
 }
+
 .logoSection {
   display: flex;
   align-items: center;
@@ -402,4 +401,5 @@ text-align: left !important;
   margin-right: 10px;
   /* Space between logo and text */
 }
+
 </style>
