@@ -6,11 +6,12 @@
         </div>
         <div class="loginForm">
             <h3>Log into LingoNow</h3>
-            <form>
+            <form @submit.prevent="validateUser()">
                 <customForm v-for="form in form" :title="form.title" :placeholderText="form.placeholderText"
                     :isPassword="form.isPassword" :key="form.id"></customForm>
+            
+                <button type="submit" class="mainBtn">Login</button>
             </form>
-            <button class="mainBtn">Login</button>
             <router-link :to="{ name: 'Signup' }">
                 <center>Don't have an account? Sign up now!</center>
             </router-link>
@@ -34,6 +35,11 @@ export default {
                     isPassword: true
                 }
             ]
+        }
+    },
+    methods: {
+        validateUser(){
+            this.$router.push('/Create');
         }
     }
 }
