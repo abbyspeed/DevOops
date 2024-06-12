@@ -14,9 +14,6 @@
             <router-link :to="{ name: 'Signup' }">
                 <center>Don't have an account? Sign up now!</center>
             </router-link>
-            <router-link :to="{ name: 'Search' }">View "Search" page here</router-link> <!--for view only-->
-            <br>
-            <router-link :to="{ name: 'Manage' }">View "Manage" page here</router-link> <!--for view only-->
         </div>
     </div>
 </template>

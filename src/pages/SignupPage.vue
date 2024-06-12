@@ -74,6 +74,7 @@ export default{
     border-radius: 25px;
     border: 1px solid grey;
     transform: translate(50%, 0%);
+    margin-top: 60px;
 }
 
 .logoSection{
