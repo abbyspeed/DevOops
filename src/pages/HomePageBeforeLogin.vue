@@ -91,9 +91,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: 100vh;
-
- height: max-content;
+  height: 100%;
+  height: max-content;
 }
 
 .header {

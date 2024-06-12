@@ -9,7 +9,7 @@
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/About">About Us</router-link></li>
-        <li><a href="#">Categories</a></li>
+        <li><router-link to="/Categories">Categories</router-link></li>
         <li><router-link to="/Manage">Manage</router-link></li>
       </ul>
     </div>
@@ -33,12 +33,9 @@
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  /* Ensure padding is included in the width */
   color: white;
   background-color: #FF9B3F;
-  /* Optional: Add background color for better visibility */
   font-family: 'Inter', sans-serif;
-  /* Apply Inter font */
 }
 
 .logoSection {
@@ -47,22 +44,17 @@
   flex: 1;
   min-width: 200px;
   padding: 0px;
-  /* Ensure minimum width for the logo section */
 }
 
 .logoSection h2 {
   margin: 0;
   font-size: 18px;
-  /* Adjust font size */
 }
 
 .logo {
   width: 40px;
-  /* Adjust the width to make the logo smaller */
   height: auto;
-  /* Maintain aspect ratio */
   margin-right: 10px;
-  /* Space between logo and text */
 }
 
 .menu {
@@ -94,7 +86,7 @@
 }
 
 .menu ul li a:hover {
-  color: #ff7200;
+  color: black;
 }
 
 .userProfile {
@@ -103,27 +95,20 @@
   flex: 1;
   justify-content: flex-end;
   min-width: 100px;
-  /* Ensure minimum width for the user profile section */
 }
 
 .user {
   width: 40px;
-  /* Adjust the width to make the user image smaller */
   height: auto;
-  /* Maintain aspect ratio */
   border-radius: 50%;
-  /* Make the image circular */
   margin-left: 10px;
-  /* Space between user image and text */
 }
 
 .userProfile p {
   margin-left: 10px;
-  /* Space between user image and text */
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .menu ul {
     flex-direction: column;

@@ -6,6 +6,7 @@ import HomePageBeforeLogin from './pages/HomePageBeforeLogin.vue'
 import ManagePage from './pages/ManagePage.vue'
 import AboutUsPage from './pages/AboutUsPage.vue'
 import CreatePage from './pages/CreatePage.vue'
+import CategoriesPage from './pages/CategoriesPage.vue'
 
 const routes = [
   { path: '/', name: "HomePageBL", component: HomePageBeforeLogin },
@@ -14,7 +15,8 @@ const routes = [
   { path: '/Search', name: "Search", component: SearchPage },
   { path: '/Manage', name: "Manage", component: ManagePage},
   { path: '/About', name: "About", component: AboutUsPage},
-  { path: '/Create', name:"Create", component: CreatePage}
+  { path: '/Create', name:"Create", component: CreatePage},
+  { path: '/Categories', name:"Categories", component: CategoriesPage}
 ]
 
 const router = createRouter({
