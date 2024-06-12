@@ -8,7 +8,7 @@ import AboutUsPage from './pages/AboutUsPage.vue'
 import CreatePage from './pages/CreatePage.vue'
 
 const routes = [
-  {path:'/',name:"HomePageBL",component:HomePageBeforeLogin},
+  { path:'/', name:"HomePageBL", component:HomePageBeforeLogin },
   { path: '/Login', name: "Login", component: LoginPage },
   { path: '/Signup', name: "Signup", component: SignupPage },
   { path: '/Search', name: "Search", component: SearchPage },
